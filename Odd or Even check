@@ -1,0 +1,24 @@
+import java.util.*;
+public class Main
+{
+    public static boolean evenorodd(int n)
+    {
+        //bitmask=1;
+        if((n&1)==0)
+        {
+            return true;
+        }
+        return false;
+    }
+    public static void main(String[] args)
+    {
+	    if(evenorodd(5))
+	    {
+	        System.out.println(n+" is an Even number\n");
+	    }
+	    else
+	    {
+	         System.out.println(n+" is an Odd number\n");
+	    }
+	}
+}
