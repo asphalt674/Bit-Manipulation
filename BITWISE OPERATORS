@@ -1,9 +1,21 @@
-import java.util.*;
+import java.util.*;s
 public class Main
 {
 	public static void main(String[] args) 
 	{
         //BINARY AND & OPERATOR
-		System.out.println(5&6);
+		System.out.println("AND OPERATION OF 5&6 is "+ (5&6));
+		//BINARY OR | OPERATOR
+	    System.out.println("OR OPERATION OF 5|6 is "+ (5 | 6));
+	    //BINARY XOR ^ OPERATOR
+	    System.out.println("XOR OPERATION OF 5^6 is "+ (5^6));
+	     //BINARY ONES COMPLEMENT ~ OPERATOR
+	    System.out.println("BINARY ONES COMPLEMENT OF ~5 is "+  ~5);
+	     //BINARY LEFT SHIFT << OPERATOR
+	    System.out.println("BINARY LEFT SHIFT OF 5<<2 is "+ (5<<2));
+	    //FORMULA=(a<<b=a*2^b)
+	    //BINARY RIGHT SHIFT << OPERATOR
+	    System.out.println("BINARY RIGHT SHIFT OF 5>>2 is "+ (5>>2));
+	    //FORMULA=(a>>b=a/2^b)
 	}
 }
