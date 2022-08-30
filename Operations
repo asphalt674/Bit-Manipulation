@@ -1,0 +1,57 @@
+import java.util.*;
+public class Main
+{
+    public static int Bitnumber(int n)
+    {
+        int i,j,c=0,sum=0;
+        for(i=n;i>0;i=i/2)
+        {
+            sum=sum+(i%2)*(int)Math.pow(10,c);
+            c++;
+        }
+        return sum;
+    }
+    public static int getIthBit(int n,int i)
+    {
+        int bitMask=(1<<i);
+        if((n&bitMask)==0)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+    public static int setIthBit(int n,int i)//set ith bit to 1
+    {
+        int bitMask=(1<<i);
+       return n|bitMask;
+    }
+     public static int clearIthBit(int n,int i)//set ith bit to 0
+    {
+        int bitMask=~(1<<i);
+       return n&bitMask;
+    }
+    
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+	    System.out.println("Enter number");
+	    int n=sc.nextInt();
+	     System.out.println("Enter index");
+	    int i=sc.nextInt();
+	    int d=i;
+	    System.out.println("Bit representation of "+n+" is "+Bitnumber(n));
+	    if((d%10)==1)
+	     System.out.println(i+"st Bit is "+ getIthBit(n,i));
+	    else if(d==2)
+	     System.out.println(i+"nd Bit is "+ getIthBit(n,i));
+	     else if(d%10==3)
+	     System.out.println(i+"rd Bit is "+ getIthBit(n,i));
+	     else
+	     System.out.println(i+"th Bit is "+ getIthBit(n,i));
+	     System.out.println(n+" after seting ith bit is "+setIthBit(n,i));
+	      System.out.println(n+" after clearing ith bit is "+clearIthBit(n,i));
+	}
+}
