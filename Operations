@@ -61,6 +61,20 @@ public class Main
         }
         return c;
     }
+    public static int exponent(int n,int pow)
+    {
+        int ans=1;
+        while(pow>0)
+        {
+            if((pow&1)!=0)//check LSB
+            {
+               ans=ans*n;
+            }
+            n=n*n;
+            pow=pow>>1;
+        }
+        return ans;
+    }
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
@@ -70,6 +84,8 @@ public class Main
 	    int i=sc.nextInt();
 	    System.out.println("Enter ending index");
 	    int j=sc.nextInt();
+	    System.out.println("Enter ending index");
+	    int pow=sc.nextInt();
 	    int d=i;
 	    System.out.println("Bit representation of "+n+" is "+Bitnumber(n));
 	    if((d%10)==1)
@@ -91,6 +107,7 @@ public class Main
 	     {
 	          System.out.println(n+" is not power of 2"); 
 	     }
-	      System.out.println("Count of setbits is "+countofset(n));
+	     System.out.println("Count of setbits is "+countofset(n));
+	     System.out.println("Exponent of "+n+"^"+pow+" is "+exponent(n,pow));
 	}
 }
